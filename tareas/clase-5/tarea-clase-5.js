@@ -1,3 +1,6 @@
+
+///PRobando GIT
+
 /*
 Cosas a tener en cuenta:
 1. Los <input> no tienen .innerText, en vez de eso, usan .value. https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input
