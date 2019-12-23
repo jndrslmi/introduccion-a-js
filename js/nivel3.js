@@ -119,15 +119,20 @@
     // Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
     // pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
-
+/*
+const nuestroTwitter = document.querySelector('.twitter');
+console.log(nuestroTwitter);
+console.log(nuestroTwitter.innerText)
+*/
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
+/*
+let nuestroTitulo = document.querySelector("h1");
+console.log(nuestroTitulo);
 
 
-
-
-
+*/
 
 /*
     Obteniendo elementos similares.
@@ -135,7 +140,8 @@
 
     También podemos obtener todos los elementos con la misma etiqueta. En nuestro
     pie de página tenemos una lista desordenada (<ul>), con tres elementos de lista (<li>) adentro.
-    Obtengamoslos todos con un array de los elementos de la página. Cuando querramos obtener multiples elementos,
+    Obtengamoslos todos con un array de los elementos de la página. Cuando querramos obtener 
+    multiples elementos,
     podemos utilizar el método '.querySelectorAll', el cual nos dará una lista con las coincidencias.
 
     Ejemplo:
@@ -145,11 +151,21 @@
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+/*
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks);
+console.log(mediaLinks.length);
 
+for (i=0; i<mediaLinks.length; i++) {
+    //en realidad hay que sacar el console log afuera de la funcion para que aparezca una sola vez,pero bueno
+    if (i==0){
+        console.log('Estas son nuestras redes sociales')
+    };
+    
+    console.log(mediaLinks[i].innerText);
+}
 
-
-
-
+*/
 
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
@@ -184,9 +200,10 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
-
-
-
+/*
+let textoDeh1 = document.querySelector("h1")
+console.log(textoDeh1.textContent);
+*/
 
 
 /*
@@ -204,10 +221,13 @@
 */
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
+/*
+let titulo = document.querySelector('h1');
+const NOMBRE_USUARIO = prompt("Dime tu nombre");
+titulo.textContent = 'Hola Senor ' + NOMBRE_USUARIO;
+console.log(titulo);
 
-
-
-
+*/
 
 /*
     Editando atributos
@@ -223,7 +243,7 @@
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-
+document.querySelector('img').src = 'img/kittens.jpeg'
 
 
 
@@ -278,6 +298,9 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+let imagenGato = document.createElement('img');
+imagenGato.src = 'img/kittens.jpeg'
+document.querySelector('header').appendChild(imagenGato);
 
 
 
